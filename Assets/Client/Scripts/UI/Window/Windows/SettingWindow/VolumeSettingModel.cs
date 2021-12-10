@@ -1,8 +1,6 @@
-﻿using System.Reflection;
-using Client.Scripts.Common;
+﻿using Client.Scripts.Common;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Client.Scripts.UI.Window.Windows.SettingWindow
