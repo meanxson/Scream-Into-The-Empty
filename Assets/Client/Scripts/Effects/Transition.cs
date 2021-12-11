@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +13,7 @@ namespace Client.Scripts.Effects
 
         private void Start()
         {
-            gameObject.SetActive(true);
+            _image.DOFade(1, 0);
         }
 
         public void FadeIn()

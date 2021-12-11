@@ -36,6 +36,8 @@ namespace Client.Scripts.UI.Window.MainMenu
             foreach (var window in _windows) window.Close();
         }
 
+        public void Exit() => Application.Quit();
+
         [Button]
         private void InitWindows()
         {
