@@ -22,19 +22,6 @@ namespace Client.Scripts.UI.Window.Windows.SettingWindow
                 PlayerPrefsConstant.Setting.Master, PlayerPrefsConstant.Setting.Music,
                 PlayerPrefsConstant.Setting.Effect, PlayerPrefsConstant.Setting.Voice
             };
-            
-
-            for (var i = 0; i < _slider.Length; i++)
-            {
-                if (PlayerPrefs.HasKey(_prefs[i]))
-                {
-                    _slider[i].value = PlayerPrefs.GetFloat(_prefs[i]);
-                    _mixer.SetFloat(_prefs[i], PlayerPrefs.GetFloat(_prefs[i]));
-                    Debug.Log($"{_prefs[i]} - {PlayerPrefs.GetFloat(_prefs[i])}");
-                }
-                else
-                    Debug.LogError($"PlayerPrefs Problem - {_prefs[i]}");
-            }
         }
 
         //TODO: Refactoring - BAD PRACTICING
@@ -43,7 +30,7 @@ namespace Client.Scripts.UI.Window.Windows.SettingWindow
             const int index = 0;
             Change(index, value);
         }
-    
+
         public void OnMusicChanged(float value)
         {
             const int index = 1;

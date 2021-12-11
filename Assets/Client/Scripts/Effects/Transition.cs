@@ -12,6 +12,11 @@ namespace Client.Scripts.Effects
 
         private void Awake() => _image = GetComponent<Image>();
 
+        private void Start()
+        {
+            gameObject.SetActive(true);
+        }
+
         public void FadeIn()
         {
             _image.DOFade(1, _duration).OnStart((() => { gameObject.SetActive(true); }));
