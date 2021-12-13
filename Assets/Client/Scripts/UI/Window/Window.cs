@@ -1,8 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Window : MonoBehaviour
+namespace Client.Scripts.UI.Window
 {
-   
+    public abstract class Window : MonoBehaviour
+    {
+        public void Open()
+        {
+            MainMenu.MainMenu.Instance.CloseAllButtons();
+            gameObject.SetActive(true);
+        }
+
+        public void Close() => gameObject.SetActive(false);
+    }
 }
