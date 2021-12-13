@@ -19,7 +19,7 @@ namespace Client.Scripts.Effects
             while (true)
             {
                 var randomIteration = Random.Range(0, 10);
-                for (int i = 0; i < randomIteration; i++)
+                for (var i = 0; i < randomIteration; i++)
                 {
                     _light.enabled = !_light.isActiveAndEnabled;
                     yield return new WaitForSeconds(Random.Range(0.01f, 0.2f));
