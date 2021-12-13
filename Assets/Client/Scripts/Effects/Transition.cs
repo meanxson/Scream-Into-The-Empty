@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +10,11 @@ namespace Client.Scripts.Effects
         private Image _image;
 
         private void Awake() => _image = GetComponent<Image>();
+
+        private void Start()
+        {
+            _image.DOFade(1, 0);
+        }
 
         public void FadeIn()
         {
